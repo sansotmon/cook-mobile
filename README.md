@@ -8,3 +8,4 @@ Paso a paso y razonamiento de proyecto:
 6. Creación del modelo recipe con sus respectivos atributos dentro del paquete model
 7. Añadida la libreria okinteractor para realizar la conexion y peticiones http al api de pruebas
 8. AHora creamos la funcion get recipes en el presentador que posterior enviara la lista a la vista para mostrarla en el layout usando un adapter para la lista.
+9. Añadidos permisos de network en el manifest.
