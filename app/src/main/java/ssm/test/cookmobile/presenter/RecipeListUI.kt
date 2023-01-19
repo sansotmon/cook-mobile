@@ -1,4 +1,6 @@
 package ssm.test.cookmobile.presenter
 
-interface RecipeListUI {
+interface RecipeListUI: BaseUI {
+    fun showRecipe(id: String)
+    fun refreshRecycler()
 }

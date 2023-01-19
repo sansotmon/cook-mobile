@@ -1,5 +1,7 @@
 package ssm.test.cookmobile.model
 
+import com.google.gson.annotations.SerializedName
+
 class Recipe {
 
     lateinit var id: String
@@ -8,6 +10,11 @@ class Recipe {
     var image: String? = null
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+
+    class Recipes {
+        @SerializedName("message")
+        var recipes: ArrayList<Recipe>? = null
+    }
 
     constructor(
         id: String,
