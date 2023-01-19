@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_image"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/margin_x"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_below="@+id/detailImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold"
+                android:text="Nombre"/>
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="Chocolate"/>
+
+            <TextView
+                android:id="@+id/labelDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:textStyle="bold"
+                android:text="Descripción"/>
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:text="Chocolate"/>
+
+            <Button
+                android:id="@+id/btnLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_marginTop="@dimen/spacing_huge"
+                android:layout_marginEnd="@dimen/spacing_huge"
+                android:layout_marginStart="@dimen/spacing_huge"
+                android:text="Ubicación" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
