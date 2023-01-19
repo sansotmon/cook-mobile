@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_list_recipe.view.*
 import ssm.test.cookmobile.model.Recipe
 import ssm.test.cookmobile.presenter.RecipeListPresenter
@@ -14,6 +15,9 @@ class RecipeListRecyclerAdapter(val presenter: RecipeListPresenter): RecyclerVie
         fun bind(recipe: Recipe) = with(itemView) {
             recipe.name?.let {
                 nameText.text = it
+            }
+            recipe.image?.let{ image ->
+                Picasso.get().load(image).into(recipeImage)
             }
         }
     }

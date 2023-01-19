@@ -20,7 +20,6 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
                 message.recipes?.forEach { recipe ->
                     val r = Recipe(recipe.id, recipe.name, recipe.description, recipe.image, recipe.latitude, recipe.longitude)
                     r.let {
-                        ui.showToast(it.name!!)
                         ui.refreshRecycler()
                     }
                 }

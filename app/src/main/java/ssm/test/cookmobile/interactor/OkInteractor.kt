@@ -25,9 +25,7 @@ object OkInteractor {
     }
 
     fun getRecipes(res: (String?) -> Unit, err: (String?) -> Unit) {
-
         url = BASE_URL.toHttpUrlOrNull()?.newBuilder()?.build()
-
         url?.let { httpUrl ->
             request = Request.Builder()
                 .url(httpUrl)
