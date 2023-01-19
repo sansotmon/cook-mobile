@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_recipe_list.view.*
+import kotlinx.android.synthetic.main.row_list_recipe.view.*
 import ssm.test.cookmobile.model.Recipe
 import ssm.test.cookmobile.presenter.RecipeListPresenter
 import ssm.test.cookmobile.R.layout.row_list_recipe
@@ -13,7 +13,7 @@ class RecipeListRecyclerAdapter(val presenter: RecipeListPresenter): RecyclerVie
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(recipe: Recipe) = with(itemView) {
             recipe.name?.let {
-                titleText.text = it
+                nameText.text = it
             }
         }
     }

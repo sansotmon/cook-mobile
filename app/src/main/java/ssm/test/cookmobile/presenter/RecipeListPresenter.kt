@@ -13,8 +13,6 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
     fun getRecipes(){
         ui.showToast("Loading recipes...")
         okInteractor.getRecipes({responseBody ->
-            ui.showToast(responseBody!!)
-
             val json: JsonObject = JsonParser().parse(responseBody).asJsonObject
             if(json.get("error")  == null){
                 val message = Gson().fromJson(responseBody, Recipe.Recipes::class.java)
@@ -23,8 +21,8 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
                     val r = Recipe(recipe.id, recipe.name, recipe.description, recipe.image, recipe.latitude, recipe.longitude)
                     r.let {
                         ui.showToast(it.name!!)
+                        ui.refreshRecycler()
                     }
-
                 }
             }else{
                 ui.showMessageDialog(json.get("ERROR").toString())
