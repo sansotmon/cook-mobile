@@ -37,5 +37,4 @@ object OkInteractor {
         requestHttp(res, err)
     }
 
-
 }
