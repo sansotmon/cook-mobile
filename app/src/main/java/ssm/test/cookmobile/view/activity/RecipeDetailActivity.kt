@@ -2,7 +2,6 @@ package ssm.test.cookmobile.view.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_recipe_detail.*
 import ssm.test.cookmobile.presenter.RecipeDetailUI

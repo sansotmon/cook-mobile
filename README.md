@@ -10,4 +10,5 @@ Paso a paso y razonamiento de proyecto:
 8. Ahora creamos la funcion get recipes en el presentador que posterior enviara la lista a la vista para mostrarla en el layout usando un adapter para la lista.
 9. Añadidos permisos de network en el manifest.
 10. Añadimos libreria picasso para mostrar las imagenes directamente de una url externa.
-11. Ahora creamos la vista de detalle de receta y creamos la logica para enviar la receta usando intent desde la lista de recetas, enviamos el json como extra y en la vista de detalle interpretamos el json y pintamos la infomarcion.
+11. Ahora creamos la vista de detalle de receta y creamos la logica para enviar la receta usando intent desde la lista de recetas, enviamos el json como extra y en la vista de detalle interpretamos el json y pintamos la infomarcion. Tambien se agrega el boton de ubicación.
+12. Se añade el sdk de google maps y con esto añadimos el activity de mapa que recibe la longitud y la latitud desde el detail de la receta, luego se interpreta y se crea el marker en el mapa.
