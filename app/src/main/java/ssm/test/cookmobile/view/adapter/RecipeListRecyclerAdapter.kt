@@ -32,7 +32,6 @@ class RecipeListRecyclerAdapter(val presenter: RecipeListPresenter): RecyclerVie
         presenter.getRecipe(position) { recipe ->
             holder.bind(recipe)
         }
-
         holder.itemView.setOnClickListener {
             presenter.actionRecipe(position)
         }
