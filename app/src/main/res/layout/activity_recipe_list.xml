@@ -24,12 +24,19 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"/>
 
+            <SearchView
+                android:id="@+id/recipeSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleText"
+                android:layout_marginTop="@dimen/margin_s"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recipeRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/titleText"
-                android:layout_marginTop="@dimen/margin"/>
+                android:layout_below="@id/recipeSearch"
+                android:layout_marginTop="@dimen/margin_s"/>
 
         </RelativeLayout>
 

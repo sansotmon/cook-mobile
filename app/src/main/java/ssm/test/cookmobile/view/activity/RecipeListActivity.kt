@@ -2,6 +2,7 @@ package ssm.test.cookmobile.view.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_recipe_list.*
 import ssm.test.cookmobile.presenter.RecipeListPresenter
 import ssm.test.cookmobile.presenter.RecipeListUI
@@ -18,10 +19,21 @@ class RecipeListActivity : BaseActivity(), RecipeListUI {
         setContentView(activity_recipe_list)
 
         presenter = RecipeListPresenter(this, this)
-
         createRecycleAdapter()
-
         presenter?.getRecipes()
+
+        recipeSearch.setOnQueryTextListener (object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(text: String?): Boolean {
+                text?.let {
+                    presenter?.findRecipe(text)
+                }
+                return false
+            }
+        })
     }
 
     private fun createRecycleAdapter(){

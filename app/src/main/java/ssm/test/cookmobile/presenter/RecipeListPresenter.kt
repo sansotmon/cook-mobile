@@ -8,7 +8,8 @@ import ssm.test.cookmobile.model.Recipe
 
 class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePresenter(context) {
 
-    private var recipes: ArrayList<Recipe> = arrayListOf()
+    private var recipes: List<Recipe> = arrayListOf()
+    private var recipesTempList: List<Recipe> = arrayListOf()
 
     fun getRecipes(){
         ui.showToast("Loading recipes...")
@@ -17,6 +18,7 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
             if(json.get("error")  == null){
                 val message = Gson().fromJson(responseBody, Recipe.Recipes::class.java)
                 recipes = message.recipes!!
+                recipesTempList = recipes
                 message.recipes?.forEach { recipe ->
                     val r = Recipe(recipe.id, recipe.name, recipe.description, recipe.image, recipe.latitude, recipe.longitude)
                     r.let {
@@ -33,15 +35,20 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
         })
     }
 
-    fun getTotalRecipes(): Int = recipes.size
+    fun getTotalRecipes(): Int = recipesTempList.size
 
-    fun getRecipe(index: Int, data: (trip:Recipe) -> Unit) {
-        val recipe = recipes[index]
+    fun getRecipe(index: Int, data: (recipe:Recipe) -> Unit) {
+        val recipe = recipesTempList[index]
         data(recipe)
     }
 
     fun actionRecipe(index: Int) {
-        val recipe = recipes[index]
+        val recipe = recipesTempList[index]
         ui.showRecipe(Gson().toJson(recipe))
+    }
+
+    fun findRecipe(text: String) {
+        recipesTempList = recipes.filter { s -> s.name!!.contains(text, ignoreCase = true)}
+        ui.refreshRecycler()
     }
 }
