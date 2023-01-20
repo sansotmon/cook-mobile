@@ -13,4 +13,10 @@ class RecipeDetailPresenter(val context: Context, val ui: RecipeDetailUI){
            ui.showRecipe(it.name!!, it.description!!, it.image!!)
         }
     }
+
+    fun getLocationRecipe() {
+        recipe?.let {
+            ui.goToMap(it.latitude, it.longitude)
+        }
+    }
 }

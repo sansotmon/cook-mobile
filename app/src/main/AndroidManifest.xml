@@ -21,6 +21,11 @@
 
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+
         <activity
             android:name=".view.activity.RecipeListActivity"
             android:exported="true"
@@ -32,6 +37,10 @@
         </activity>
         <activity
             android:name=".view.activity.RecipeDetailActivity"
+            android:screenOrientation="fullSensor">
+        </activity>
+        <activity
+            android:name=".view.activity.MapActivity"
             android:screenOrientation="fullSensor">
         </activity>
     </application>
