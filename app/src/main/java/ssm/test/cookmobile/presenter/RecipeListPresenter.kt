@@ -39,4 +39,9 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
         val recipe = recipes[index]
         data(recipe)
     }
+
+    fun actionRecipe(index: Int) {
+        val recipe = recipes[index]
+        ui.showRecipe(Gson().toJson(recipe))
+    }
 }

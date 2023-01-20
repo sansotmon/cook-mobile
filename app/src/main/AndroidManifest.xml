@@ -30,7 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.activity.RecipeDetailActivity"
+            android:screenOrientation="fullSensor">
+        </activity>
     </application>
-
-
 </manifest>
