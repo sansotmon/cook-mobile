@@ -2,7 +2,7 @@ package ssm.test.cookmobile.view.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import kotlinx.android.synthetic.main.activity_recipe_list.*
 import ssm.test.cookmobile.R.layout.activity_recipe_list
 import ssm.test.cookmobile.presenter.RecipeListPresenter

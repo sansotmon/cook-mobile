@@ -9,14 +9,14 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- background -->
-    <color name="backgroundPrimary">#FFFFFFFF</color>
+    <color name="backgroundPrimary">#FF000000</color>
 
     <!-- primary colors -->
-    <color name="colorPrimary">#2C62A8</color>
-    <color name="colorPrimaryDark">#14354a</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
 
     <!-- gray -->
-    <color name="lightGray">#DCDCDC</color>
+    <color name="lightGray">#14354a</color>
     <color name="mediumGray">#CDCDCD</color>
 
 </resources>

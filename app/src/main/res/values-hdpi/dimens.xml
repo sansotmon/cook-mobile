@@ -26,6 +26,7 @@
     <!-- typical height of views -->
     <dimen name="height_normal">44dp</dimen>
     <dimen name="height_image">190dp</dimen>
+    <dimen name="height_list_image">170dp</dimen>
 
     <!-- margins views -->
     <dimen name="margin_xx">60dp</dimen>

@@ -2,17 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/margin">
+    android:layout_marginBottom="@dimen/spacing_normal"
+    android:layout_marginTop="@dimen/spacing_normal">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/margin_s">
+        android:background="@drawable/rounded_card_recipe">
 
         <ImageView
             android:id="@+id/recipeImage"
-            android:layout_width="80dp"
-            android:layout_height="60dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_image_list"
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:id="@+id/nameText"
@@ -20,9 +22,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin"
             android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/spacing_tiny"
             android:layout_centerVertical="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold"
             android:text="Huevo con pan"
-            android:layout_toEndOf="@+id/recipeImage"/>
+            android:paddingBottom="@dimen/spacing_small"
+            android:layout_below="@+id/recipeImage"/>
 
     </RelativeLayout>
 
