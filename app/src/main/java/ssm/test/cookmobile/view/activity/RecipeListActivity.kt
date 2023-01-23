@@ -4,10 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_recipe_list.*
+import ssm.test.cookmobile.R.layout.activity_recipe_list
 import ssm.test.cookmobile.presenter.RecipeListPresenter
 import ssm.test.cookmobile.presenter.RecipeListUI
-
-import ssm.test.cookmobile.R.layout.activity_recipe_list
 import ssm.test.cookmobile.view.adapter.RecipeListRecyclerAdapter
 
 class RecipeListActivity : BaseActivity(), RecipeListUI {
@@ -50,9 +49,12 @@ class RecipeListActivity : BaseActivity(), RecipeListUI {
     }
 
     override fun showRecipe(recipeJson: String) {
-        val intent = Intent(this, RecipeDetailActivity::class.java)
-        intent.putExtra(RecipeDetailActivity.RECIPE, recipeJson)
-        startActivity(intent)
+        startActivity(createRecipeDetailIntent(recipeJson))
     }
 
+    private fun createRecipeDetailIntent(recipeJson: String): Intent {
+        val intent = Intent(this, RecipeDetailActivity::class.java)
+        intent.putExtra(RecipeDetailActivity.RECIPE, recipeJson)
+        return intent
+    }
 }

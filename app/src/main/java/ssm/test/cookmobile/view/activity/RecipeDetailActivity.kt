@@ -39,9 +39,13 @@ class RecipeDetailActivity : BaseActivity(), RecipeDetailUI {
     }
 
     override fun goToMap(latitude: Double, longitude: Double) {
+        startActivity(createMapIntent(latitude, longitude))
+    }
+
+    private fun createMapIntent(latitude: Double, longitude: Double): Intent {
         val intent = Intent(this, MapActivity::class.java)
         intent.putExtra("latitude", latitude)
         intent.putExtra("longitude", longitude)
-        startActivity(intent)
+        return intent
     }
 }

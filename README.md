@@ -13,3 +13,5 @@ Paso a paso y razonamiento de proyecto:
 11. Ahora creamos la vista de detalle de receta y creamos la logica para enviar la receta usando intent desde la lista de recetas, enviamos el json como extra y en la vista de detalle interpretamos el json y pintamos la infomarcion. Tambien se agrega el boton de ubicación.
 12. Se añade el sdk de google maps y con esto añadimos el activity de mapa que recibe la longitud y la latitud desde el detail de la receta, luego se interpreta y se crea el marker en el mapa.
 13. Añadido buscador de recetas en la vista de lista de recetas, busca coincidencias por el nombre de receta y vuelve y pinta el recycler view.
+14. Añadido librerias test con expresso, añadidas pruebas para intents en lista de recetas y detalle de receta.
+
