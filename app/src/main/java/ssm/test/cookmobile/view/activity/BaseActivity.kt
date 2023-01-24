@@ -11,6 +11,7 @@ open class BaseActivity: AppCompatActivity(), BaseUI {
 
     private var mAlertDialog: AlertDialog? = null
     private var mAlertAskDialog: AlertDialog? = null
+    private var mProgressDialog: AlertDialog? = null
 
     override fun showMessageDialog(message: String) {
         runOnUiThread {
@@ -45,5 +46,30 @@ open class BaseActivity: AppCompatActivity(), BaseUI {
     override fun hideMessageDialog() {
         mAlertDialog?.dismiss()
         mAlertAskDialog?.dismiss()
+    }
+
+    override fun showProgressDialog(resourceMessage: Int) {
+        showProgressDialog(resources.getString(resourceMessage))
+    }
+
+    override fun showProgressDialog(message: String){
+        hideMessageDialog()
+        runOnUiThread {
+            if (mProgressDialog != null) {
+                mProgressDialog?.findViewById<TextView>(R.id.loading_msg)!!.text = message
+                mProgressDialog?.show()
+            } else {
+                mProgressDialog = AlertDialog.Builder(this)
+                    .setView(R.layout.progress_view)
+                    .setCancelable(false)
+                    .show()
+
+                mProgressDialog?.findViewById<TextView>(R.id.loading_msg)!!.text = message
+            }
+        }
+    }
+
+    override fun hideProgressDialog(){
+        mProgressDialog?.dismiss()
     }
 }

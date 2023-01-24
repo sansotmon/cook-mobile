@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
+import ssm.test.cookmobile.R
 import ssm.test.cookmobile.model.Recipe
 
 class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePresenter(context) {
@@ -12,7 +13,7 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
     private var recipesTempList: List<Recipe> = arrayListOf()
 
     fun getRecipes(){
-        ui.showToast("Loading recipes...")
+        ui.showToast(context.getString(R.string.activity_recipe_list_loading))
         okInteractor.getRecipes({responseBody ->
             val json: JsonObject = JsonParser().parse(responseBody).asJsonObject
             if(json.get("error")  == null){
