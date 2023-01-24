@@ -24,4 +24,4 @@ Paso a paso y razonamiento de proyecto:
 
 NOTAS:
 En el directorio de la aplicación se encuentra un archivo recipes.json donde esta la informacion de las recetas. Actualmente se encuentra funcionando con una url remota en mockable.io
-
+Las ubicaciones de las recetas son representativas, use locaciones aleatorias dentro de latinoamerica.
