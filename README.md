@@ -18,3 +18,4 @@ Paso a paso y razonamiento de proyecto:
 16. Añadido test para adapter de lista de recetas, validacion de que la lista tenga item, click de una posicion exacta y si es reciclable el adapter.
 17. Añadida libreria de automator para crear prueba de marcador clickeable del mapa de recetas.
 18. Añadidos colores para version nocturna, mejoras de visualizacion la lista de recetas, añadidos nuevos shapes para configurar backgrounds con border.
+19. Añadidos estilos para vista de detalle de receta y tambien nuevo fondo con bordes redondos para boton de ubicacion.

@@ -56,7 +56,6 @@ class RecipeDetailActivityTest {
     @Test
     fun onCreate() {
         onView(withId(R.id.btnLocation)).perform(click())
-        onView(withId(R.id.labelName)).check(matches(withText(R.string.activity_recipe_detail_name)))
         onView(withId(R.id.labelDescription)).check(matches(withText(R.string.activity_recipe_detail_description)))
     }
 

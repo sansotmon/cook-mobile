@@ -20,12 +20,12 @@
     <dimen name="spacing_uc">2dp</dimen>
 
     <!-- typical sizes of views -->
-    <dimen name="button_height_normal">41dp</dimen>
+    <dimen name="button_height_normal">52dp</dimen>
     <dimen name="button_height_short">33dp</dimen>
 
     <!-- typical height of views -->
     <dimen name="height_normal">45dp</dimen>
-    <dimen name="height_image">200dp</dimen>
+    <dimen name="height_image">230dp</dimen>
     <dimen name="height_image_list">190dp</dimen>
 
     <!-- margins views -->
