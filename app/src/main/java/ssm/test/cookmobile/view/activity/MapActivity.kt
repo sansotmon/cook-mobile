@@ -47,7 +47,7 @@ class MapActivity: BaseActivity(), OnMapReadyCallback, MapUI {
         markerRecipe = mMap.addMarker(
             MarkerOptions()
                 .position(latLng)
-                .title("receta")
+                .title("Recipe Marker")
         )
         mMap.animateCamera(location)
     }

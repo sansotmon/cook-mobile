@@ -19,3 +19,7 @@ Paso a paso y razonamiento de proyecto:
 17. Añadida libreria de automator para crear prueba de marcador clickeable del mapa de recetas.
 18. Añadidos colores para version nocturna, mejoras de visualizacion la lista de recetas, añadidos nuevos shapes para configurar backgrounds con border.
 19. Añadidos estilos para vista de detalle de receta y tambien nuevo fondo con bordes redondos para boton de ubicacion.
+20. Añadido json con recetas en el directorio del proyecto.
+
+NOTAS:
+En el directorio de la aplicación se encuentra un archivo recipes.json donde esta la informacion de las recetas. Actualmente se encuentra funcionando con una url remota en mockable.io
