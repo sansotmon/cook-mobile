@@ -17,4 +17,4 @@ Paso a paso y razonamiento de proyecto:
 15. Añadidas pruebas para textfield y button en lista de recetas y detalle de recetas, valindando coninicidencia de labels y click en el boton ubicación.
 16. Añadido test para adapter de lista de recetas, validacion de que la lista tenga item, click de una posicion exacta y si es reciclable el adapter.
 17. Añadida libreria de automator para crear prueba de marcador clickeable del mapa de recetas.
-18. Añadidos colores para version nocturna, mejoras de visualizacion la lista de recetas.
+18. Añadidos colores para version nocturna, mejoras de visualizacion la lista de recetas, añadidos nuevos shapes para configurar backgrounds con border.
