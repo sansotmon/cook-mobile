@@ -16,7 +16,7 @@ class RecipeListPresenter(val context: Context, val ui: RecipeListUI) : BasePres
         ui.showToast(context.getString(R.string.activity_recipe_list_loading))
         okInteractor.getRecipes({responseBody ->
             val json: JsonObject = JsonParser().parse(responseBody).asJsonObject
-            if(json.get("error")  == null){
+            if(json.get("error") == null){
                 val message = Gson().fromJson(responseBody, Recipe.Recipes::class.java)
                 recipes = message.recipes!!
                 recipesTempList = recipes
